@@ -23,22 +23,22 @@ This repository provides a standardized framework for:
 ### 1. Upstream Processing (Shell Scripts)
 All upstream steps are automated in shell scripts located in `/scripts`.
 
-* [cite_start]**Environment Setup**: Configuration using Conda and SRA-Toolkit[cite: 5, 9].
-* [cite_start]**Preprocessing**: Quality control with FastQC and adapter trimming with Cutadapt[cite: 18, 23]. 
+* **Environment Setup**: Configuration using Conda and SRA-Toolkit[cite: 5, 9].
+* **Preprocessing**: Quality control with FastQC and adapter trimming with Cutadapt[cite: 18, 23]. 
     * *Script*: `scripts/01_preprocessing.sh`
-* [cite_start]**Alignment**: Supports Hisat2 and STAR for mapping reads to a reference genome[cite: 60, 62].
+* **Alignment**: Supports Hisat2 and STAR for mapping reads to a reference genome[cite: 60, 62].
     * *Script*: `scripts/02_alignment.sh`
-* [cite_start]**Quantification**: Counting reads per gene using featureCounts[cite: 112, 113].
+* **Quantification**: Counting reads per gene using featureCounts[cite: 112, 113].
     * *Script*: `scripts/03_quantification.sh`
 
 ### 2. Downstream Analysis (R Scripts)
 Downstream statistical analysis is performed using R (v4.0+).
 
-* [cite_start]**Differential Expression**: Utilizing `DESeq2` for normalization and identifying DEGs[cite: 126, 151].
+* **Differential Expression**: Utilizing `DESeq2` for normalization and identifying DEGs[cite: 126, 151].
     * *Script*: `scripts/04_deseq2_analysis.R`
-* [cite_start]**Functional Enrichment**: GO/KEGG Over-representation Analysis (ORA) and Gene Set Enrichment Analysis (GSEA)[cite: 239, 330, 365].
+* **Functional Enrichment**: GO/KEGG Over-representation Analysis (ORA) and Gene Set Enrichment Analysis (GSEA)[cite: 239, 330, 365].
     * *Script*: `scripts/05_enrichment.R`
-* [cite_start]**Network Analysis**: WGCNA for identifying highly correlated gene modules[cite: 445, 469].
+* **Network Analysis**: WGCNA for identifying highly correlated gene modules[cite: 445, 469].
     * *Script*: `scripts/06_wgcna.R`
 
 ---

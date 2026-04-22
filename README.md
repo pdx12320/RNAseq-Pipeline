@@ -23,22 +23,22 @@ This repository provides a standardized framework for:
 ### 1. Upstream Processing (Shell Scripts)
 All upstream steps are automated in shell scripts located in `/scripts`.
 
-* **Environment Setup**: Configuration using Conda and SRA-Toolkit[cite: 5, 9].
-* **Preprocessing**: Quality control with FastQC and adapter trimming with Cutadapt[cite: 18, 23]. 
+* **Environment Setup**: Configuration using Conda and SRA-Toolkit.
+* **Preprocessing**: Quality control with FastQC and adapter trimming with Cutadapt. 
     * *Script*: `scripts/01_preprocessing.sh`
-* **Alignment**: Supports Hisat2 and STAR for mapping reads to a reference genome[cite: 60, 62].
+* **Alignment**: Supports Hisat2 and STAR for mapping reads to a reference genome.
     * *Script*: `scripts/02_alignment.sh`
-* **Quantification**: Counting reads per gene using featureCounts[cite: 112, 113].
+* **Quantification**: Counting reads per gene using featureCounts.
     * *Script*: `scripts/03_quantification.sh`
 
 ### 2. Downstream Analysis (R Scripts)
 Downstream statistical analysis is performed using R (v4.0+).
 
-* **Differential Expression**: Utilizing `DESeq2` for normalization and identifying DEGs[cite: 126, 151].
+* **Differential Expression**: Utilizing `DESeq2` for normalization and identifying DEGs.
     * *Script*: `scripts/04_deseq2_analysis.R`
-* **Functional Enrichment**: GO/KEGG Over-representation Analysis (ORA) and Gene Set Enrichment Analysis (GSEA)[cite: 239, 330, 365].
+* **Functional Enrichment**: GO/KEGG Over-representation Analysis (ORA) and Gene Set Enrichment Analysis (GSEA).
     * *Script*: `scripts/05_enrichment.R`
-* **Network Analysis**: WGCNA for identifying highly correlated gene modules[cite: 445, 469].
+* **Network Analysis**: WGCNA for identifying highly correlated gene modules.
     * *Script*: `scripts/06_wgcna.R`
 
 ---
